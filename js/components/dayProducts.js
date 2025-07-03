@@ -1,16 +1,16 @@
 // import-функция для загрузки данных
 export async function loadDayProducts(url) {
   try {
-      const response = await fetch('./data/data.json');
-      if (!response.ok) {
-          throw new Error(`Ошибка загрузки данных: ${response.status}`);
-      }
-      
-      const data = await response.json();
-      return data.filter(product => product.goodsOfDay);
+    const response = await fetch("./data/data.json");
+    if (!response.ok) {
+      throw new Error(`Ошибка загрузки данных: ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data.filter((product) => product.goodsOfDay);
   } catch (error) {
-      console.error('Ошибка при получении товаров дня:', error);
-      return [];
+    console.error("Ошибка при получении товаров дня:", error);
+    return [];
   }
 }
 
@@ -18,11 +18,13 @@ export async function loadDayProducts(url) {
 export function renderDayProducts(products, containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) {
-      console.error(`Контейнер ${containerSelector} не найден`);
-      return;
+    console.error(`Контейнер ${containerSelector} не найден`);
+    return;
   }
-  
-  container.innerHTML = products.map(product => `
+
+  container.innerHTML = products
+    .map(
+      (product) => `
       <li class="day-products__item swiper-slide">
           <div class="product-card product-card--small">
               <div class="product-card__visual">
@@ -50,20 +52,22 @@ export function renderDayProducts(products, containerSelector) {
               </div>
           </div>
       </li>
-  `).join('');
+  `
+    )
+    .join("");
 
   // Инициализация Swiper
-  new Swiper('.day-products__slider', {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      navigation: {
-          nextEl: '.day-products__navigation-btn--next',
-          prevEl: '.day-products__navigation-btn--prev',
-      },
-      breakpoints: {
-          320: { slidesPerView: 1 },
-          768: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 }
-      }
+  new Swiper(".day-products__slider", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".day-products__navigation-btn--next",
+      prevEl: ".day-products__navigation-btn--prev",
+    },
+    breakpoints: {
+      320: { slidesPerView: 1 },
+      768: { slidesPerView: 3 },
+      1024: { slidesPerView: 4 },
+    },
   });
 }
