@@ -9,7 +9,7 @@ export default async function initCatalog() {
   const itemsPerPage = 6;
 
   try {
-    const response = await fetch('./../../data/data.json');
+    const response = await fetch('data/data.json');
     products = await response.json();
 
     renderProducts(products, currentPage);
