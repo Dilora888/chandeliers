@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   (async () => {
-      const products = await loadDayProducts('data.json');
+      const products = await loadDayProducts('data/data.json');
       renderDayProducts(products, '.day-products__list');
   })();
   
