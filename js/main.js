@@ -4,7 +4,6 @@ import initCatalog from "./components/catalog.js";
 import { initAccordion } from "./components/accordion.js";
 import { initBasket } from "./components/basket.js";
 import { loadDayProducts, renderDayProducts } from './components/dayProducts.js';
-// import { initTooltip } from "./components/tooltip.js";
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -13,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initCatalog();
   initAccordion();
   const basket = initBasket();
-  initCatalog();
-  // initTooltip()
   document.addEventListener("click", (event) => {
     const button = event.target.closest(".add-to-cart"); 
     if (!button) return;
