@@ -1,39 +1,39 @@
 /* Vendor */
 /* ------------------------------------ */
-@import "vendor/swiper.scss";
-@import "vendor/tippy.scss";
+@import "scss/vendor/swiper.scss";
+@import "scss/vendor/tippy.scss";
 
 /* Global */
 /* ------------------------------------ */
-@import "global/_normalize.scss";
-@import "global/_variables";
-@import "global/_mixins";
-@import "global/_fonts";
-@import "global/_reboot";
-@import "global/_container";
-@import "global/_visually-hidden";
+@import "scss/global/_normalize.scss";
+@import "scss/global/_variables";
+@import "scss/global/_mixins";
+@import "scss/global/_fonts";
+@import "scss/global/_reboot";
+@import "scss/global/_container";
+@import "scss/global/_visually-hidden";
 
 
 /* Blocks */
 /* ------------------------------------ */
-@import "blocks/_btn";
-@import "blocks/_header";
-@import "blocks/_location";
-@import "blocks/_basket";
-@import "blocks/_breadcrumbs";
-@import "blocks/_main-menu";
-@import "blocks/_catalog";
-@import "blocks/_catalog-form";
-@import "blocks/_custom-checkbox";
-@import "blocks/_custom-radio";
-@import "blocks/_product-card";
-@import "blocks/_tooltip";
-@import "blocks/_day-products";
-@import "blocks/_description";
-@import "blocks/_faq";
-@import "blocks/_accordion";
-@import "blocks/_questions";
-@import "blocks/_custom-input";
-@import "blocks/_footer";
-@import "blocks/_message";
+@import "scss/blocks/_btn";
+@import "scss/blocks/_header";
+@import "scss/blocks/_location";
+@import "scss/blocks/_basket";
+@import "scss/blocks/_breadcrumbs";
+@import "scss/blocks/_main-menu";
+@import "scss/blocks/_catalog";
+@import "scss/blocks/_catalog-form";
+@import "scss/blocks/_custom-checkbox";
+@import "scss/blocks/_custom-radio";
+@import "scss/blocks/_product-card";
+@import "scss/blocks/_tooltip";
+@import "scss/blocks/_day-products";
+@import "scss/blocks/_description";
+@import "scss/blocks/_faq";
+@import "scss/blocks/_accordion";
+@import "scss/blocks/_questions";
+@import "scss/blocks/_custom-input";
+@import "scss/blocks/_footer";
+@import "scss/blocks/_message";
 
