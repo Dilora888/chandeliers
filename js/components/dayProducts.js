@@ -1,7 +1,7 @@
 // import-функция для загрузки данных
 export async function loadDayProducts(url) {
   try {
-      const response = await fetch('./../../data/data.json');
+      const response = await fetch('data/data.json');
       if (!response.ok) {
           throw new Error(`Ошибка загрузки данных: ${response.status}`);
       }
